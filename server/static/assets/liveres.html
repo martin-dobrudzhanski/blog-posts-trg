@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking form</title>
+	<style>
+		html,
+		body {
+			margin:0; padding:0;
+			overflow:hidden;
+		}
+		body {
+			font-family:sans-serif;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="widget-container">
+
+		<script type="text/javascript">
+
+			var getUrlParameter = function (name) {
+				name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+				var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+				var results = regex.exec(location.search);
+				return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			}
+
+			var domain = location.protocol
+				+ '//'
+				+ location.hostname
+				+ ( location.port ? ':' + location.port: '' );
+
+			_fez_account = "9150d4d6-29d6-46af-8ddf-e8bd1f74d0a6";
+			_fez_brand = "5";
+			_fez_rest = "";
+
+			_fez_width = "100%";
+			_fez_height = "1200px";
+
+			var script = domain + "/js/liveres.js";
+			var scriptArrayString = '["' + script + '"]';
+			_fez_scriptinsert = scriptArrayString;
+
+			var callbackQs = '?restid={restid}&bookdate={bookdate}&covers={covers}&restname={restname}&seshname={seshname}&marketing={marketing}';
+
+			_fez_callbackurl = "https://s3-eu-west-1.amazonaws.com/trg-liveres-success/liveres-complete.html" + callbackQs;
+
+			_fez_stylesheet = domain + "/css/liveres.css";
+			_fez_scrolling = "no";
+			_fez_anal = "";
+			_fez_mobile = "no"
+			_fez_ascript = "0"
+			_fez_head = "";
+			_fez_desc = "";
+			_fez_offer = "";
+			_fez_offerpopup = "1";
+			_fez_offerpicker = "0";
+			_fez_offerpopupchoosefullprice = "2";
+			_fez_daymarketingpopup = "1";
+			_fez_choosefullprice = "0";
+
+			window.addEventListener('message', function () {
+				if (event.origin !== 'https://bookings.liveres.co.uk') {
+					return;
+				}
+				if (event.data.eventType === 'submit')  {
+					parent.postMessage(event.data, domain);
+					return;
+				}
+				if (event.data.eventType === 'complete')  {
+					parent.postMessage(event.data, domain);
+				}
+			});
+
+		</script>
+		<script type="text/javascript" src="https://bookings.liveres.co.uk/scripts/fez.js"></script>
+
+	</div>
+
+</body>
+</html>

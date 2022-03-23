@@ -1,0 +1,12 @@
+<svg id="Icon_Circle_Enter" data-name="Icon/Circle/Enter" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <circle id="Ellipse_927" data-name="Ellipse 927" cx="12" cy="12" r="12" style="fill:#3c3c3c"/>
+    <g id="arrow-right-circle" transform="translate(-85 1)">
+        <path id="Path_3522" data-name="Path 3522" class="cls-2" d="m12 18 5-5-5-5" transform="translate(86 -2)"/>
+        <path id="Line_61" data-name="Line 61" class="cls-2" transform="translate(91 11)" d="M0 0h12"/>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+.field {
+	overflow:hidden;
+	margin:0 0 16px;
+	width:100%;
+	&[data-inlinecontrols="true"] {
+		width:100%;
+		margin:0;
+		@include whenScreenIs(mdx) {
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			align-content:center;
+			.control {
+				flex-basis:auto;
+			}
+			.btn {
+				margin-left:8px;
+			}
+		}
+	}
+}

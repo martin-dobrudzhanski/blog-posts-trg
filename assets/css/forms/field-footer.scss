@@ -1,0 +1,13 @@
+.field-footer {
+	// height:16px;
+	p.help {
+		width:100%;
+		font-size:12px;
+		font-weight:bold;
+		color:$scarlet;
+		text-align:center;
+		@include whenScreenIs(xs) {
+			text-align:left;
+		}
+	}
+}

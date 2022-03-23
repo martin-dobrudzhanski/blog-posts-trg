@@ -1,0 +1,30 @@
+.card {
+	@import '~assets/css/mixins/tiles.scss';
+	&.orange { @include tileFormat($color:orange); }
+	&.green   { @include tileFormat($color:green); }
+	&.blue { @include tileFormat($color:blue); }
+	&.teal { @include tileFormat($color: teal); }
+	&.transparent  { @include tileFormat($color:transparent); }
+	&.yellow { @include tileFormat($color: yellow); }
+	&.black { @include tileFormat($color: black); }
+	&.pink { @include tileFormat($color: pink); }
+	&.red { @include tileFormat($color: red); }
+	@include fadeIn();
+	.tile-img {
+		background-position:center;
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	.desktop-card {
+		display:none;
+		@include whenScreenIs (md) {
+			display:flex;
+		}
+	}
+	.mobile-card {
+		display:flex;
+		@include whenScreenIs (md) {
+			display:none;
+		}
+	}
+}

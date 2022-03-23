@@ -1,0 +1,120 @@
+.btn {
+	position:relative;
+	display:block;
+	width:100%;
+	height:40px;
+	padding:12px 10px 10px;
+	font-family:$secondary-body-font;
+	font-size:20px;
+	line-height:1;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:center;
+	background-color:$rebrand-blue;
+	text-transform:uppercase;
+	color:#fff;
+	border:none;
+	cursor:pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	overflow:hidden;
+	user-select:none;
+	-webkit-tap-highlight-color:transparent;
+	&:focus {
+		outline: 0 none;
+	}
+	&:hover {
+		background-color:$rebrand-green;
+	}
+	&:active {
+		background-color:$rebrand-green;
+	}
+	@include whenScreenIs(mdx) {
+		display:inline;
+		&[data-size='xs'] {
+			width:105px;
+		}
+		&[data-size='sm'] {
+			width:128px;
+		}
+		&[data-size='md'] {
+			width:176px;
+		}
+		&[data-size='lg'] {
+			width:208px;
+		}
+		&[data-size='xl'] {
+			width:288px;
+		}
+	}
+	&[data-color='moss-green'] {
+		background-color:$rebrand-green;
+		color:#fff;
+		&:hover {
+			background-color:$light-green;
+		}
+		&:active {
+			background-color:$booger-green;
+		}
+	}
+	&[data-color='rebrand-blue'] {
+		background-color:$rebrand-blue;
+		color:#fff;
+		&:hover {
+			background-color:$rebrand-green;
+		}
+		&:active {
+			background-color:$rebrand-green;
+		}
+	}
+	&[data-color='booger-green'] {
+		background-color:$booger-green;
+		color:#fff;
+		&:hover {
+			background-color:$light-green;
+		}
+		&:active {
+			background-color:$moss-green;
+		}
+	}
+	&[data-color='white'] {
+		background-color:#fff;
+		color:$rebrand-blue;
+		&:hover {
+			background-color:$rebrand-green;
+			color:#fff;
+		}
+		&:active {
+			color:#fff;
+			background-color:$rebrand-green-light;
+		}
+	}
+	&[data-color='white-mobile-moss-green-desktop'] {
+		background-color:#fff;
+		color:$moss-green;
+		&:hover {
+			background-color:$light-green;
+		}
+		&:active {
+			outline:none;
+			background-color:$booger-green;
+		}
+		@include whenScreenIs(mdx) {
+			background-color:$moss-green;
+			color:#fff;
+		}
+	}
+	&[data-loading] {
+		background-color:$booger-green;
+		text-indent:999px;
+		text-align:left;
+		white-space:nowrap;
+		color:#fff;
+	}
+	.loader {
+		position:absolute;
+		top:50%; left:50%;
+		width:20px; height:20px;
+		margin-top:-10px; margin-left:-10px;
+		background-image:url('~/assets/img/icons/icon-tick-off-white.svg');
+	}
+}

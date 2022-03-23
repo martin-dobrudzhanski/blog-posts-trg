@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="40px" viewBox="0 0 24 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>pin-map-green</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pin-map-green">
+            <path d="M23,12.2098026 C23,5.05748205 16.9764647,1.08839479 10.7671321,2.17861764 C4.20908369,3.3318092 0.55364932,11.4840795 1.04370954,13.1336025 C3.78824584,22.3716016 6.33229359,35.2848465 11.972909,39 C15.6812365,38.0762001 23,19.6002019 23,12.2098026 Z" id="Fill-1-Copy" fill="#008257"></path>
+            <path d="M6.77677419,3.33362523 C3.33677419,5.2156986 1,8.89989054 1,13.1377564 C1,19.2887892 12,39 12,39 C12,39 23,22.3628685 23,13.1377564 C23,6.98620105 18.0753548,2 12,2" id="Stroke-3" stroke="#1C1B1B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

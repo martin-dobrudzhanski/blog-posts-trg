@@ -1,0 +1,627 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+html {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+button:focus,
+a:focus, a:active,
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  outline: none !important;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+@font-face {
+	font-family:'alte-haas-grotesk';
+	src:url('../fonts/alte_haas_grotesk_regular.woff') format('woff');
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'alte-haas-grotesk';
+	src:url('../fonts/alte_haas_grotesk_bold.woff') format('woff');
+	font-weight:700;
+	font-style:normal;
+}
+
+html,
+body{
+	height:100%;
+	padding: 0;
+	margin: 0;
+	font-size:16px;
+	font-family:alte-haas-grotesk, 'Helvetica Neue', Helvetica, sans-serif, Arial;
+	background-color:#ede6e1;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="submit"],
+input[type="week"] {
+	height:40px;
+	margin:0;
+	padding:3px 8px 6px 8px;
+	border-radius:0;
+	border:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	background:#fff;
+	font-size: 15px;
+	color: black;
+	font-family:alte-haas-grotesk, 'Helvetica Neue', Helvetica, sans-serif, Arial;
+}
+
+textarea,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="submit"],
+button,
+select {
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	border-radius:0;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+textarea {
+	height:88px;
+	resize:none;
+}
+
+#main {
+	position:relative;
+	width:100%;
+}
+
+#col1 {
+	position:absolute;
+	top:0; left:0;
+	right:50%; bottom:0;
+	padding:0 40px;
+}
+
+@media (min-width:1px) and (max-width:860px) {
+	#col1 {
+		position:static;
+		right:auto;
+		padding:0 16px;
+	}
+}
+
+#col2,
+#col3 {
+	margin-left:50%;
+	padding:0 40px;
+}
+
+@media (min-width:1px) and (max-width:860px) {
+	#col2,
+	#col3 {
+		margin-left:0;
+		padding:0 16px;
+	}
+}
+
+#col1next {
+	display:none;
+}
+
+#col4.next {
+	display:none;
+}
+
+#title {
+	display:none;
+}
+
+#restaurant,
+#sesh,
+#covers,
+#time,
+#requests,
+#forename,
+#surname,
+#tel,
+#email {
+	display:flex;
+	align-items:flex-start;
+}
+
+#restaurant.next,
+#sesh.next,
+#covers.next,
+#calendar.next,
+#time.next,
+#requests.next,
+#contact.next {
+	opacity:0.5;
+}
+
+#restaurant > span,
+#sesh > span,
+#covers > span,
+#time > span,
+#requests > span,
+#title > span,
+#forename > span,
+#surname > span,
+#tel > span,
+#email > span {
+	width:120px;
+	margin:12px 0 0;
+	flex-shrink:0;
+}
+
+#time {
+	margin-bottom:8px;
+}
+
+#forename > span {
+	text-indent:9999px;
+	position:relative;
+}
+
+#forename > span:before {
+	position:absolute;
+	content:'First name';
+	text-indent:-9999px;
+}
+
+#surname > span {
+	text-indent:9999px;
+	position:relative;
+}
+
+#surname > span:before {
+	position:absolute;
+	content:'Last name';
+	text-indent:-9999px;
+}
+
+#restaurant select,
+#sesh select,
+#covers select,
+#time select,
+#requests textarea,
+#title select,
+#forename input,
+#surname input,
+#tel input,
+#email input {
+	width:100%;
+	box-sizing:border-box;
+	border:1px solid #006b47;
+	margin:0 0 8px;
+	flex-grow:1;
+	flex-shrink:1;
+	flex-basis:auto;
+}
+
+#restaurant select,
+#sesh select,
+#covers select,
+#time select {
+	border-radius:6px;
+}
+
+#restaurant select {
+	flex-basis:100px;
+}
+
+#time select {
+	margin-bottom:0;
+}
+
+#calendar {
+	margin:0 0 8px;
+	padding:16px 32px;
+	background-color:#fff;
+}
+
+#calendar span:first-child {
+	display: none;
+}
+
+#calendar table a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#calendar table#Calendar1 {
+	width: 100%;
+	border-collapse: collapse;
+	border:0 none;
+}
+
+
+#calendar table#Calendar1 td {
+	border-collapse: collapse;
+	width:48px; height:32px;
+	margin:0; padding:0;
+	vertical-align:middle;
+	font-size:12px; line-height:2;
+	text-align: center;
+	/* text black */
+	color:#2b2929;
+	border:0 none;
+	text-align:center;
+}
+
+/* next/prev months */
+#calendar table#Calendar1 table.cal_title {
+	width:100%;
+	margin:0 0 16px;
+	padding:0;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+#calendar table#Calendar1 table.cal_title td {
+	height:16px;
+	margin:0; padding:0;
+	font-size:16px; line-height:1;
+	color:#669532;
+}
+
+#calendar table#Calendar1 table.cal_title td:first-child {
+	text-align:left;
+}
+
+#calendar table#Calendar1 table.cal_title td:last-child {
+	text-align:right;
+}
+
+#calendar table#Calendar1 table.cal_title td.cal_nextprev {
+	width:20%;
+}
+
+/* days of the week */
+#calendar table#Calendar1 th {
+	font-size:12px; line-height:2;
+	text-align: center;
+	text-transform:uppercase;
+	color:#c9641a;
+}
+
+/* selected day */
+#calendar table#Calendar1 td.cal_selectday {
+	font-weight:700;
+	color:#fff;
+	background-color:#0068a2;
+}
+
+/* today */
+#calendar table#Calendar1 td.cal_today {
+	color:#669532;
+	font-weight:700;
+}
+
+/* other month */
+#calendar table#Calendar1 td.cal_othermonth {
+	background-color:#ede6e1;
+}
+
+/* not available or past */
+#calendar table#Calendar1 td.cal_notavail {
+	opacity:0.3;
+	background-color:#ede6e1;
+}
+
+/* available day */
+#calendar table#Calendar1 td.cal_day {
+}
+
+#email {
+	padding-bottom:16px;
+}
+
+#contact {
+	overflow:hidden;
+	padding-bottom:8px;
+}
+
+#consentOptions .consentChoice {
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:flex-end;
+}
+
+#emailConsentCheckbox {
+	margin:4px 20px 10px 0;
+}
+
+#col2back {
+	display:none;
+}
+
+#summary {
+	display:none;
+}
+
+#marketinglabel,
+#tclabel {
+	display:block;
+	font-size:16px; line-height:1.5;
+}
+
+#tclabel a {
+	color:#669532;
+}
+
+#CheckBoxMarketing,
+#tccheck {
+	float:left;
+	margin:4px 20px 0 0;
+}
+
+#tccheck {
+	margin-bottom:10px;
+}
+
+@media(min-width:1px) and (max-width:400px) {
+	#CheckBoxMarketing {
+		margin-bottom:20px;
+	}
+	#tccheck {
+		margin-bottom:40px;
+	}
+}
+
+#book {
+	box-sizing:border-box;
+	display: block;
+	margin:16px 0;
+	padding:9px 0 11px;
+	font-family:alte-haas-grotesk, 'Helvetica Neue', Helvetica, sans-serif, Arial;
+	font-size:18px; line-height:1;
+	font-weight:700;
+	width: 100%;
+	color:#fff;
+	background-color:	#0068a2;
+	cursor: pointer;
+}
+
+#book:hover {
+	background-color:#d1d9ac;
+}
+
+#book[disabled=disabled],
+#book:disabled {
+	background-color:#d1d9ac;
+	cursor: auto;
+}
+
+#bookingref p {
+	max-width:560px;
+	margin:0 auto 24px;
+	padding:16px;
+	background-color:#fff;
+	font-size:18px; line-height:1.5;
+	font-weight:700;
+	text-align:center;
+	color:#c9641a;
+}
+
+@media(min-width:1px) and (max-width:592px) {
+	#bookingref p {
+		margin-right:16px;
+		margin-left:16px;
+	}
+}
+
+#bookingref p span#bookemail {
+	display:block;
+	margin:12px 0 0;
+	font-family:alte-haas-grotesk, 'Helvetica Neue', Helvetica, sans-serif, Arial;
+	font-size:13px; line-height: 1.5;
+	font-weight:500;
+	text-align:center;
+	/* text black */
+	color: #2b2929;
+}
+
+#bookingref p span#booksms {
+	display:none;
+}
+
+#bookingref hr {
+	display:none;
+}
+
+#bookingref p.bookmsghead {
+	display:none;
+}
+
+#bookingref ul {
+	max-width:560px;
+	margin:0 auto;
+	padding:16px;
+	border:1px solid #c9641a
+}
+
+@media(min-width:1px) and (max-width:592px) {
+	#bookingref ul {
+		margin-right:16px;
+		margin-left:16px;
+	}
+}
+
+#bookingref ul li:nth-child(1),
+#bookingref ul li:nth-child(2),
+#bookingref ul li:nth-child(3) {
+	display: none;
+}
+
+#bookingref ul li {
+	margin:0 0 12px;
+	font-family:alte-haas-grotesk, 'Helvetica Neue', Helvetica, sans-serif, Arial;
+	font-size:18px; line-height:1.5;
+	font-weight:700;
+	text-align:center;
+	color: #c9641a;
+}
+
+#bookingref ul li:last-child {
+	margin-bottom:0;
+}
+
+#bookingref ul li span.bookmsghead {
+	display:block;
+	margin:0 0 4px;
+	font-family:alte-haas-grotesk, 'Helvetica Neue', Helvetica, sans-serif, Arial;
+	font-size:16px; line-height:1.5;
+	font-weight:700;
+	text-align:center;
+	/* text black */
+	color: #2b2929;
+}
+
+#bookingref br,
+#bookingref center {
+	display:none;
+}
+
+/*popups*/
+
+#errorInner {
+	position:absolute;
+	z-index: 900;
+	top:32px; left:50%;
+	width:75%;
+	opacity:1;
+	padding:0 0 32px;
+	background-color:#fff;
+	-moz-transform:translate3d(-50%,0,0);
+	-webkit-transform:translate3d(-50%,0,0);
+	transform:translate3d(-50%,0,0);
+	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+}
+
+#errorInner #closeErr {
+	position:absolute;
+	overflow:hidden;
+	top:16px; right:16px;
+	width:24px; height:24px;
+	background-image:url(../images/icon-close.svg);
+	background-size:100%;
+	background-repeat:no-repeat;
+	text-indent:100%;
+	white-space:nowrap;
+	cursor:pointer;
+}
+
+#errorInner p {
+	margin: 40px 16px 0;
+	font-size: 20px; line-height: 1.2;
+	font-weight:900;
+	text-align:center;
+	color: #c9641a;
+}
+
+#errorInner ul {
+	box-sizing:border-box;
+	margin:24px 0 0;
+	padding:0 16px;
+	font-size:16px;
+	text-align:center;
+	line-height:1.5;
+	font-weight:700;
+}
+
+#errorInner ul li {
+	margin-bottom:8px;
+}
+
+
+#errorInner p {
+}
+
+#errorInner ul {
+}

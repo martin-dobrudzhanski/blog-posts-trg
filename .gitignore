@@ -1,0 +1,16 @@
+node_modules
+.DS_Store
+package-lock.json
+npm-debug.log
+.nuxt
+dist
+build
+javascript
+configs
+Archive.zip
+backstop.json
+ayespy-config.json
+backstop_data
+newrelic_agent.log
+.idea
+.env

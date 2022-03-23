@@ -1,0 +1,16 @@
+.toasted-container.bookings.bottom-center.full-width.fit-to-screen {
+	.booking-toast {
+		font-weight: 900;
+		height:80px;
+		background-color: $rebrand-teal;
+		@include whenScreenIs(mdx) {
+			height:56px;
+			padding-left:43px;
+		}
+
+		.action.ripple {
+			color:$rebrand-green;
+			font-size: inherit;
+		}
+	}
+}

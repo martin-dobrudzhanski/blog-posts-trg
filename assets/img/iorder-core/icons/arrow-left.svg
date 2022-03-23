@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-arrow-left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon-arrow-left" stroke="#1C1B1B" stroke-width="2.4">
+            <path d="M2,12.2080364 C8.36863686,11.8340364 15.6223622,12.0470364 22,12.2080364 L2,12.2080364 Z" id="Stroke-1"></path>
+            <path d="M8.8021,6.2 C6.7411,7.91 4.0481,10.742 1.8021,12.2 L8.8021,6.2 Z" id="Stroke-3"></path>
+            <path d="M8.8021,18.2 C6.7411,16.49 4.0481,13.658 1.8021,12.2 L8.8021,18.2 Z" id="Stroke-5"></path>
+        </g>
+    </g>
+</svg>

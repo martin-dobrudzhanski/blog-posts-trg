@@ -1,0 +1,63 @@
+:root {
+	--innerHeight: 100vh;
+}
+
+html {
+	&[data-modal] {
+		overflow:hidden;
+		position: relative;
+		height: 100%;
+		-webkit-overflow-scrolling:touch;
+		@media(max-width: 400px) {
+			position:fixed;
+			width:100%;
+		}
+	}
+}
+
+body {
+  font-family: $font;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  background-color: $white;
+  &[data-modal] {
+    position: relative;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    @media (max-width: 400px) {
+      position: fixed;
+      width: 100%;
+    }
+  }
+  &[data-nav] {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: $rebrand-blue;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+[data-fullscreen] {
+  min-height: calc(var(--innerHeight, 100vh) - #{$header-nav-height-mobile});
+  @include whenScreenIs(mdx) {
+    min-height: calc(var(--innerHeight, 100vh) - #{$header-nav-height-desktop});
+  }
+}
+
+[data-app] {
+  &,
+  *:not(input) {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  [data-fullscreen] {
+    min-height: calc(100vh-#{$header-nav-height-mobile});
+  }
+}

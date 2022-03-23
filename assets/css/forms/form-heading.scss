@@ -1,0 +1,28 @@
+h1.form-heading {
+	margin:0 0 24px;
+	font-family:$display-font;
+	font-size:22px;
+	text-transform:uppercase;
+	text-align:center;
+	@include whenScreenIs(xs) {
+		margin:0 0 16px;
+	}
+	&[data-size='lg'] {
+		height:48px;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		font-size:22px;
+		line-height: 1.09;
+		margin:0;
+		text-align:center;
+		color:$rebrand-orange;
+		@include whenScreenIs(xs) {
+			margin:0;
+		}
+		@include whenScreenIs(mdx) {
+			height:80px;
+			font-size:28px;
+		}
+	}
+}

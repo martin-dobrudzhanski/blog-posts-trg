@@ -1,0 +1,32 @@
+.toasted-container.iorderauth.bottom-center.full-width.fit-to-screen, .toasted-container.drinks.bottom-center.full-width.fit-to-screen {
+    font-family: 'alte-haas-grotesk';
+
+        z-index:99999;
+        .iorderauth-toast, .iorderauth-toast-small, .restaurantislive-toast {
+            font-size: 14px;
+            font-weight: bold;
+						font-family: 'alte-haas-grotesk';
+						line-height: 1.43;
+            z-index: 999999999;
+            min-height:80px;
+            background-color:#353535;
+            color:#fff;
+            @include whenScreenIs(mdx) {
+                height:64px;
+                padding-left:43px;
+            }
+
+            .action.ripple {
+                color:$rebrand-green;
+            }
+        }
+
+        .iorderauth-toast-small {
+          min-height:80px;
+          @include whenScreenIs(mdx) {
+            min-height:56px;
+          }
+        }
+
+
+}

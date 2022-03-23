@@ -1,0 +1,186 @@
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  text-align: center;
+}
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+// used for sliders
+.hide {
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+// used for sliders
+.show {
+  max-height: 9999px;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+
+  &:not(.text) {
+    padding-bottom: 0;
+  }
+}
+
+.button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                   supported by Chrome and Opera */
+}
+
+// used in click and collect
+.jiggle {
+  animation: jiggle 0.2s infinite;
+  animation-duration: 0.2s;
+  animation-name: jiggle;
+  animation-iteration-count: infinite;
+  transform: rotate(-10deg);
+}
+
+@keyframes jiggle {
+  0% {
+    -moz-transform: rotate(-8deg);
+  }
+  50% {
+    -moz-transform: rotate(8deg);
+  }
+}
+
+@mixin h-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+
+@mixin v-center() {
+  position: relative;
+  top: 50%;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+@mixin center($horizontal, $vertical) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin fadeIn() {
+  animation: fadein 2s;
+}
+
+@mixin EnlargeHover() {
+  &:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+  }
+}
+
+@mixin clickable($expand: true) {
+  cursor: pointer;
+  @if ($expand) {
+    &:hover {
+      transition: all .1s ease-in-out;
+      transform: scale(1.1);
+    }
+  }
+}
+
+@mixin noselect() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+}
+
+@mixin whenScreenIs($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @else if $class == mdx {
+    @media (min-width: 1025px) { @content; }
+  }
+
+  @else if $class == tablet {
+    @media (max-width: 1025px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: [xs, sm, md, mdx, tablet, lg] but you are using: " + $class;
+  }
+}
+
+@mixin placeholder {
+  $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input';
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content
+    }
+  }
+}

@@ -1,0 +1,16 @@
+p.form-intro {
+	margin:24px 0 36px;
+	padding: 0 16px;
+	font-size:16px; line-height:1.25;
+	font-weight:700;
+	text-align:center;
+	@include whenScreenIs(xs) {
+		margin:0 0 32px;
+	}
+	&[data-size='lg'] {
+		margin:32px 16px 52px;
+		@include whenScreenIs(xs) {
+			margin:32px 16px 24px;
+		}
+	}
+}

@@ -1,0 +1,261 @@
+@mixin tileFormat ($color, $opacity:1) {
+  p {
+    font-family: $secondary-body-font;
+  }
+  .btn {
+    font-family: "HeadlineMTStd-Bold", $font;
+  }
+  @if $color == orange {
+    background: rgba($rebrand-orange, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-orange;
+      &:hover {
+        background-color:$rebrand-green;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == dark-green {
+    background: rgba($moss-green, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$black;
+    }
+  }
+  @else if $color == bright-green {
+    background: rgba($rebrand-green, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$black;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-green;
+      &:hover {
+        background-color:$rebrand-blue;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-blue-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == teal {
+    background: rgba($rebrand-teal, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-teal;
+      &:hover {
+        background-color:$rebrand-green;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == blue {
+    background: rgba($rebrand-blue, $opacity);
+    .card-text {
+      color: $white;
+    }
+    p {
+      color:$white;
+    }
+    .heading {
+      color: $white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-blue;
+      &:hover {
+        background-color:$rebrand-green;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == transparent {
+    background-color: rgba(255,255,255,0);
+    color: $rebrand-orange;
+    .card-text {
+      color: $rebrand-orange;
+    }
+    p {
+      color:$black;
+    }
+    .btn {
+      background-color:$rebrand-blue;
+      color:#fff;
+      &:hover {
+        background-color:$rebrand-green;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == pink {
+    background: rgba($rebrand-pink, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-pink;
+      &:hover {
+        background-color:$rebrand-green;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == yellow {
+    background: rgba($rebrand-yellow, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-yellow;
+      &:hover {
+        background-color:$rebrand-green;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == red {
+    background: rgba($rebrand-red, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-red;
+      &:hover {
+        background-color:$rebrand-green;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == black {
+    background: rgba($black, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$black;
+      &:hover {
+        background-color:$rebrand-green;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else if $color == green {
+    background: rgba($rebrand-green, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-green;
+      &:hover {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+  @else {
+    background: rgba($rebrand-teal, $opacity);
+    color: #fff;
+    .card-text {
+      color: #fff;
+    }
+    p {
+      color:$white;
+    }
+    .btn {
+      background-color:#fff;
+      color:$rebrand-teal;
+      &:hover {
+        background-color:$rebrand-green;
+        color:#fff;
+      }
+      &:active {
+        background-color:$rebrand-green-light;
+        color:#fff;
+      }
+    }
+  }
+}

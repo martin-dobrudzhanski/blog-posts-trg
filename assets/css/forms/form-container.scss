@@ -1,0 +1,16 @@
+.form-container {
+	box-sizing:border-box;
+	overflow:hidden;
+	margin:0; padding:0;
+	padding:24px 24px 16px;
+	background-color:$very-light-pink;
+	@include whenScreenIs(xs) {
+		background-color:$very-light-pink;
+	}
+	&[data-size='lg'] {
+		padding:0 0 16px;
+		@include whenScreenIs(xs) {
+			padding:0;
+		}
+	}
+}

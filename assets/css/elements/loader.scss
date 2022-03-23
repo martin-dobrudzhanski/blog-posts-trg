@@ -1,0 +1,30 @@
+.loader {
+	content:'';
+	display:block;
+	width:32px; height:32px;
+	animation:spin 1s infinite linear;
+	background-image:url('~/assets/img/icons/icon-loader.svg');
+	background-size:100%;
+	background-position:center;
+	@keyframes spin  {
+		from {
+			transform:rotate(0deg);
+		}
+		to {
+			transform:rotate(359deg);
+		}
+	}
+	&.white {
+		background-image:url('~/assets/img/iorder-coreV2/icons/loader-white.svg');
+	}
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition:opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}

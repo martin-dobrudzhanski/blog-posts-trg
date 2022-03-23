@@ -1,0 +1,25 @@
+div.braintree-sheet__header, [data-braintree-id="choose-a-way-to-pay"], .braintree-placeholder {
+    display: none !important;
+}
+[data-braintree-id="toggle"] {
+    background-color: #eaeaea !important;
+    padding: 4px !important;
+    margin: 14px auto !important;
+    width: 220px !important;
+    // color: #008257;
+    // font-weight: 900;
+}
+[data-braintree-id="paypal"] {
+    background-color: #eaeaea !important;
+    border: none !important;
+    // height: 36px !important;
+}
+div[data-braintree-id="sheet-error"] {
+    padding-bottom: 12px !important;
+}
+
+div[data-element="content"] {
+  -webkit-box-shadow: 0px -2px 8px 0px rgba(173,173,173,0.45);
+  -moz-box-shadow: 0px -2px 8px 0px rgba(173,173,173,0.45);
+  box-shadow: 0px -2px 8px 0px rgba(173,173,173,0.45);
+}

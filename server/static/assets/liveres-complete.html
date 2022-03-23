@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+
+		var getUrlParameter = function (name) {
+			name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+			var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+			var results = regex.exec(location.search);
+			return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+		}
+
+		var bookingInfo = {
+			restid:     getUrlParameter('restid'),
+			bookdate:   getUrlParameter('bookdate'),
+			covers:     getUrlParameter('covers'),
+			restname:   getUrlParameter('restname'),
+			seshname:   getUrlParameter('seshname'),
+			marketing:  getUrlParameter('marketing')
+		}
+
+		parent.postMessage({
+			eventType: 'complete',
+			bookingInfo: bookingInfo
+		}, 'https://bookings.liveres.co.uk');
+
+	</script>
+</head>
+<body>
+</body>
+</html>

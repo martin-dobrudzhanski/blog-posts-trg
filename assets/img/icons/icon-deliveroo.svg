@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+    <defs>
+        <style>
+            .cls-2{fill:#35b8b2}
+        </style>
+    </defs>
+    <g id="Icon_Circle_Deliveroo" data-name="Icon/Circle/Deliveroo" transform="translate(-754 -562)">
+        <rect id="Rectangle" width="40" height="40" rx="20" transform="translate(754 562)" style="fill:#fff"/>
+        <g id="Logo_Deliveroo" data-name="Logo/Deliveroo" transform="translate(733.335 557.914)">
+            <path id="Path_3499" data-name="Path 3499" class="cls-2" d="m205.135 12.7-.7 7.5-1.192-6.325-3.742.9 1.192 6.325-5.393 1.291.954 5.052 9.483 2.271 2.17-5.489 1.032-11.072zm-3 10.883a.63.63 0 0 1-.729.08c-.274-.1-.4-.477-.293-.928.078-.335.441-.385.623-.39a.405.405 0 0 1 .2.047.7.7 0 0 1 .392.42.809.809 0 0 1-.189.771zm2.746.347c-.144.279-.517.314-.883.113-.248-.137-.246-.484-.217-.7a.708.708 0 0 1 .12-.316.6.6 0 0 1 .406-.3.694.694 0 0 1 .649.385.852.852 0 0 1-.071.818z" transform="translate(-161.788)"/>
+            <path id="Path_3500" data-name="Path 3500" class="cls-2" d="M633.553 847.6a.915.915 0 0 0-.8.437l-.08-.371h-.773l.125.574v2.36h.751v-1.87a.583.583 0 0 1 .541-.312.72.72 0 0 1 .423.13l.357-.8a1.038 1.038 0 0 0-.544-.148z" transform="translate(-588.081 -815.19)"/>
+            <path id="Path_3501" data-name="Path 3501" class="cls-2" d="M157.3 977.1z" transform="translate(-124.685 -941.632)"/>
+            <path id="Path_3502" data-name="Path 3502" class="cls-2" d="M712.785 847.8a1.531 1.531 0 0 0 0 3.06 1.531 1.531 0 0 0 0-3.06zm0 2.269a.739.739 0 1 1 .755-.739.713.713 0 0 1-.755.739z" transform="translate(-665.606 -815.385)"/>
+            <path id="Path_3503" data-name="Path 3503" class="cls-2" d="M842.785 847.8a1.531 1.531 0 1 0 1.483 1.53 1.447 1.447 0 0 0-1.483-1.53zm0 2.269a.739.739 0 1 1 .755-.739.713.713 0 0 1-.755.739z" transform="translate(-792.537 -815.385)"/>
+            <path id="Path_3504" data-name="Path 3504" class="cls-2" d="M32.584 795.3h-.751v1.655a1.165 1.165 0 0 0-.9-.415 1.545 1.545 0 0 0 0 3.06 1.17 1.17 0 0 0 .921-.432l.078.371h.784l-.13-.609zm-1.5 3.508a.739.739 0 1 1 .755-.739.713.713 0 0 1-.756.739z" transform="translate(0 -764.124)"/>
+            <path id="Path_3505" data-name="Path 3505" class="cls-2" d="m388.881 852.877-.576-2.377h-.805l.784 2.934h1.206l.784-2.934h-.817z" transform="translate(-349.451 -818.021)"/>
+            <path id="Path_3506" data-name="Path 3506" class="cls-2" d="M504.366 847.8a1.436 1.436 0 0 0-1.466 1.53 1.45 1.45 0 0 0 1.568 1.53 2.17 2.17 0 0 0 1.173-.335l-.288-.649a1.894 1.894 0 0 1-.874.227.782.782 0 0 1-.791-.437h2.112a1.575 1.575 0 0 0 .033-.347 1.432 1.432 0 0 0-1.467-1.519zm-.722 1.263a.671.671 0 0 1 .722-.517.664.664 0 0 1 .722.517z" transform="translate(-462.126 -815.385)"/>
+            <path id="Path_3507" data-name="Path 3507" class="cls-2" d="M167.866 847.5a1.531 1.531 0 0 0 .1 3.06 2.169 2.169 0 0 0 1.173-.335l-.288-.649a1.894 1.894 0 0 1-.873.227.782.782 0 0 1-.791-.437h2.113a1.575 1.575 0 0 0 .033-.347 1.432 1.432 0 0 0-1.467-1.519zm-.737 1.27a.671.671 0 0 1 .722-.517.665.665 0 0 1 .722.517z" transform="translate(-133.57 -815.092)"/>
+            <path id="Path_3508" data-name="Path 3508" class="cls-2" d="M345.875 792.9a.477.477 0 0 0 0 .954.477.477 0 0 0 0-.954z" transform="translate(-308.345 -761.781)"/>
+            <path id="Rectangle_507" data-name="Rectangle 507" class="cls-2" transform="translate(37.152 32.479)" d="M0 0h.751v2.934H0z"/>
+            <path id="Path_3509" data-name="Path 3509" class="cls-2" d="M300 799.538h.751V795.3H300z" transform="translate(-264.016 -764.124)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg id="Icon_User" data-name="Icon/User" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:#3c3c3c;stroke:transparent}
+        </style>
+    </defs>
+    <path id="Rectangle_542" data-name="Rectangle 542" style="fill:none" d="M0 0h24v24H0z"/>
+    <g id="QikAum" transform="translate(1.016 1.636)">
+        <g id="Group_2726" data-name="Group 2726">
+            <path id="Path_3526" data-name="Path 3526" class="cls-2" d="M510.356 477.463h-9.975a1.109 1.109 0 0 1-.52-.1.835.835 0 0 1-.445-.963 11.016 11.016 0 0 1 2.42-5.488 11.276 11.276 0 0 1 3.2-2.67.29.29 0 0 1 .41.046 7.2 7.2 0 0 0 9.9-.037.226.226 0 0 1 .318-.036 11.038 11.038 0 0 1 5.563 7.564c.049.228.063.464.119.69a.846.846 0 0 1-.817.993c-.073.006-.148 0-.222 0z" transform="translate(-499.401 -456.735)"/>
+            <path id="Path_3527" data-name="Path 3527" class="cls-2" d="M632.229 171.4a6.3 6.3 0 1 1 6.306-6.16 6.306 6.306 0 0 1-6.306 6.16z" transform="translate(-621.257 -158.794)"/>
+        </g>
+    </g>
+</svg>

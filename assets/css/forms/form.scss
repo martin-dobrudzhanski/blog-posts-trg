@@ -1,0 +1,18 @@
+.form {
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	width:100%;
+	align-items:center;
+	user-select:none;
+	-webkit-tap-highlight-color:none;
+	&[data-size='lg'] {
+		margin:0 auto 16px;
+		padding:0;
+		max-width:560px;
+		@include whenScreenIs(xs) {
+			padding: 0 16px;
+			max-width:100%;
+		}
+	}
+}

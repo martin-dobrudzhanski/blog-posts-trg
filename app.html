@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sheerid/jslib@1/sheerid.css" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@sheerid/jslib@1/sheerid.js"></script>
+    <script>
+        sheerId.conversion.listenForVerificationId();
+    </script>
+    <script type="text/javascript"
+      src="https://cdn-ukwest.onetrust.com/consent/2d36a7e0-a778-4f39-9e35-982b75268635<%= process.env.NODE_ENV === 'production' ? '' : '-test'%>/OtAutoBlock.js"></script>
+    <script
+      src="https://cdn-ukwest.onetrust.com/consent/2d36a7e0-a778-4f39-9e35-982b75268635<%= process.env.NODE_ENV === 'production' ? '' : '-test'%>/otSDKStub.js"
+      data-document-language="true" type="text/javascript" charset="UTF-8"
+      data-domain-script="2d36a7e0-a778-4f39-9e35-982b75268635<%= process.env.NODE_ENV === 'production' ? '' : '-test'%>"></script>
+    <script type="text/javascript">
+      function OptanonWrapper() { }
+    </script>
+    <script type="text/javascript" src="//try.abtasty.com/3fad9a5234c123a07a7ddfeb3fde859b.js"></script>
+    {{ HEAD }}
+  </head>
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+  </body>
+</html>

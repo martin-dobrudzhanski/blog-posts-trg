@@ -1,0 +1,16 @@
+.field-header {
+	margin:0 0 8px;
+	label {
+		display:block;
+		width:100%;
+		font-size:16px;
+		font-weight:500;
+		@include whenScreenIs(mdx) {
+			text-align:center;
+		}
+		.required {
+			margin:0 0 0 2px;
+			color:$rebrand-red;
+		}	
+	}
+}
