@@ -101,7 +101,7 @@ export default {
   }
   main.main-content-container {
     display: block;
-    max-width: 960px;
+    // max-width: 960px;
     min-width: 320px;
     margin: 0 auto;
   }

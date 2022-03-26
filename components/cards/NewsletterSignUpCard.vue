@@ -291,7 +291,7 @@ export default {
     }
 
     @include whenScreenIs(mdx) {
-      right: 312px;
+      right: 120px;
     }
   }
 
@@ -327,7 +327,7 @@ export default {
 
     @include whenScreenIs(lg) {
       max-width: calc(50% + 2rem);
-      text-align: right;
+      text-align: left;
       padding: 2rem 1rem 1rem 3rem;
       background-image: none;
     }
