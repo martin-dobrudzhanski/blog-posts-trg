@@ -3,12 +3,12 @@
     <nav class="nav">
       <div
         v-for="(cat, i) in categories"
-        :key="cat"
+        :key="cat.id"
         @click="toggleActive(i)"
         :class="{ active: i === isActive }"
         class="nav__item"
       >
-        <BaseLink to="#">{{ cat }}</BaseLink>
+        <BaseLink to="#">{{ cat.name }}</BaseLink>
       </div>
     </nav>
     <main>
@@ -136,7 +136,13 @@ export default {
       description:
         'Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum ipsumLoremipsumLorem ',
       isActive: null,
-      categories: ['Mains', 'Desserts', 'Salads', 'Sides', 'Baby Food']
+      categories: [
+        { id: 1, name: 'Mains' },
+        { id: 2, name: 'Desserts' },
+        { id: 3, name: 'Salads' },
+        { id: 4, name: 'Sides' },
+        { id: 5, name: 'Baby Food' }
+      ]
     };
   },
   methods: {
@@ -181,7 +187,8 @@ export default {
       width: 1200px;
       margin: 10px auto;
     }
-    @include whenScreenIs(tablet) {
+    @include whenScreenIs(sm) {
+      padding: 0 50px;
     }
   }
 }
