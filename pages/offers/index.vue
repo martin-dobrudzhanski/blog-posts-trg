@@ -1,9 +1,6 @@
 <template>
   <section class="offers" data-fullscreen>
-    <div
-      v-if="content.heroCarouselSlides"
-      class="offers__hero-wrapper"
-    >
+    <div v-if="content.heroCarouselSlides" class="offers__hero-wrapper">
       <HeroCarousel :slides="content.heroCarouselSlides" />
     </div>
     <div class="offers__tile-grid-wrapper">
@@ -48,8 +45,8 @@ export default {
     TileGrid
   },
   mixins: [meta],
-  async asyncData ({ store, params, error }) {
-    return await getContent(store, 'offers-page', error)
+  async asyncData({ store, params, error }) {
+    return await getContent(store, 'offers-page', error);
   },
   data() {
     return {

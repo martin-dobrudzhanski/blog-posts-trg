@@ -52,18 +52,18 @@ export default {
   components: {
     Tile,
     TileGrid,
-    HeroCarousel,
+    HeroCarousel
   },
   mixins: [meta],
   layout: 'fullWidth',
   data() {
     return {
-      content: null,
+      content: null
     };
   },
   async asyncData({ store, params, error }) {
     return getContent(store, 'home', error);
-  },
+  }
 };
 </script>
 

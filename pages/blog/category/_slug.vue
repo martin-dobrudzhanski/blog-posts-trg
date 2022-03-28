@@ -12,7 +12,8 @@
       </div>
     </nav>
     <main>
-      <!-- Carousel -->
+      <!-- just for debugging -->
+      <h1 class="page-marker">{{ $route.params.slug }}</h1>
       <div class="flower-img-container">
         <img
           class="flower-img-container__image"
@@ -22,8 +23,6 @@
         />
       </div>
       <vueper-slides
-        autoplay
-        duration="3500"
         fixed-height="true"
         :breakpoints="{ 600: { height: 450 } }"
       >
@@ -48,62 +47,11 @@
         </vueper-slide>
       </vueper-slides>
 
-      <!-- Welcome banner -->
-      <div class="welcome-banner">
-        <h1>Welcome to the Chiquito Blog</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
-          vitae!
-        </p>
-      </div>
-
-      <!-- Category name -->
-      <h2 class="category-name__header">
-        <p class="category-name__name">category name</p>
-        <p class="category-name__dots"></p>
-        <button class="category-name__seeAllBtn">See all</button>
-      </h2>
-
-      <!-- Slider small carousel -->
-      <vueper-slides
-        class="no-shadow"
-        fixed-height="true"
-        :visible-slides="3"
-        slide-multiple
-        :gap="1"
-        :slide-ratio="1 / 2"
-        :dragging-distance="100"
-        :breakpoints="{
-          800: { visibleSlides: 2, slideMultiple: 2, height: 500 },
-          600: { visibleSlides: 1, slideMultiple: 1, height: 500 }
-        }"
-      >
-        <vueper-slide v-for="i in 6" :key="i">
-          <template #content>
-            <div class="small-cards-container">
-              <SmallCard :title="title" :description="description" />
-            </div>
-          </template>
-        </vueper-slide>
-      </vueper-slides>
-
-      <!-- Category name -->
-      <h2 class="category-name__header">
-        <p class="category-name__name">category name</p>
-        <p class="category-name__dots"></p>
-        <button class="category-name__seeAllBtn">See all</button>
-      </h2>
-      <!-- Category second line -->
       <div class="small-cards-container-second">
-        <span v-for="card in 2" :key="card">
+        <span v-for="card in 6" :key="card">
           <SmallCard :title="title" :description="description" />
         </span>
       </div>
-      <NewsletterSignUpCard
-        :title="'Sign up for great offers'"
-        :text="'Lorem Lorem lorem Loremlorem loremlorem'"
-        :image="image"
-      />
     </main>
   </div>
 </template>
@@ -111,14 +59,12 @@
 <script>
 import { mapGetters } from 'vuex';
 import SmallCard from '@/components/SmallCard';
-import NewsletterSignUpCard from '~/components/cards/NewsletterSignUpCard.vue';
 import { VueperSlides, VueperSlide } from 'vueperslides';
 import 'vueperslides/dist/vueperslides.css';
 
 export default {
   components: {
     SmallCard,
-    NewsletterSignUpCard,
     VueperSlides,
     VueperSlide
   },
@@ -141,11 +87,9 @@ export default {
         { id: 2, name: 'Desserts' },
         { id: 3, name: 'Salads' },
         { id: 4, name: 'Sides' }
-      ],
-      content: null
+      ]
     };
   },
-
   methods: {
     toggleActive(i) {
       this.isActive = i;
@@ -156,11 +100,9 @@ export default {
       title: 'testCardData/getTitle',
       description: 'testCardData/getDescription'
     })
-  },
-  mounted() {}
+  }
 };
 </script>
-
 <style lang="scss" scoped>
 @import '~assets/css/variables.scss';
 @import '~assets/css/helpers.scss';
@@ -269,58 +211,6 @@ export default {
   }
 }
 
-.welcome-banner {
-  background-color: #e6cfdc;
-  margin: 20px auto;
-  text-align: center;
-  // width: 60%;
-  padding: 30px 0;
-  border-radius: 5px;
-  > h1 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-}
-
-.category-name {
-  margin-bottom: 1rem;
-  &__header {
-    display: flex;
-    height: 26px;
-    margin-bottom: 1rem;
-  }
-  &__name {
-    font-family: $card-display-font;
-    font-size: 26px;
-    margin-right: 0.5rem;
-    color: $greyish-brown;
-  }
-  &__dots {
-    flex-grow: 1;
-    border-bottom: 2px dotted $greyish-brown;
-    height: 11px;
-  }
-  &__seeAllBtn {
-    border: none;
-    background-color: black;
-    color: white;
-    border-radius: 15px;
-    padding: 0 10px;
-  }
-}
-
-.small-cards-container {
-  @include whenScreenIs(xs) {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  // height: 300px;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
-
 .small-cards-container-second {
   @include whenScreenIs(xs) {
     display: flex;
@@ -329,9 +219,6 @@ export default {
       margin-bottom: 0;
       margin-top: -33px;
     }
-  }
-  @include whenScreenIs(tablet) {
-    grid-template-columns: 1fr 1fr;
   }
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -346,10 +233,10 @@ export default {
 .vueperslides--fixed-height {
   height: 400px;
 }
-.vueperslides__bullets {
-  bottom: -10px !important;
-}
 .active {
   border-bottom: 2px solid rgb(2, 160, 223);
+}
+.page-marker {
+  text-align: center;
 }
 </style>
