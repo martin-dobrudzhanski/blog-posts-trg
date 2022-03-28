@@ -2,11 +2,9 @@
   <div class="small-card-container">
     <div class="small-card-container__image"></div>
     <div class="small-card-container__text">
-      <h2 class="small-card-container__heading">Blog Title</h2>
+      <h2 class="small-card-container__heading">{{ title }}</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea temporibus
-        facilis porro totam impedit, voluptas vitae. Quibusdam, nostrum
-        nesciunt. Architecto.
+        {{ description }}
       </p>
       <button class="small-card-container__read-more-btn">Read more</button>
     </div>
@@ -14,7 +12,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    title: {
+      type: String
+    },
+    description: {
+      type: String
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

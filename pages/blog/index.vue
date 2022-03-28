@@ -1,15 +1,26 @@
 <template>
   <div class="main-content">
     <nav class="nav">
-      <div class="nav__item">Category</div>
-      <div class="nav__item">Category</div>
-      <div class="nav__item">Category</div>
-      <div class="nav__item">Category</div>
-      <div class="nav__item">Category</div>
-      <div class="nav__item">Category</div>
+      <div
+        v-for="(cat, i) in categories"
+        :key="cat"
+        @click="toggleActive(i)"
+        :class="{ active: i === isActive }"
+        class="nav__item"
+      >
+        <BaseLink to="#">{{ cat }}</BaseLink>
+      </div>
     </nav>
     <main>
       <!-- Carousel -->
+      <div class="flower-img-container">
+        <img
+          class="flower-img-container__image"
+          src="@/assets/img/flower-green.png"
+          alt="pic"
+          width="200px"
+        />
+      </div>
       <vueper-slides
         fixed-height="true"
         :breakpoints="{ 600: { height: 450 } }"
@@ -17,14 +28,6 @@
         <vueper-slide v-for="i in 2" :key="i">
           <template #content>
             <div class="carousel-container">
-              <!-- <div class="flower-img-container">
-                <img
-                  class="flower-img-container__image"
-                  src="@/assets/img/flower-green.png"
-                  alt="pic"
-                  width="200px"
-                />
-              </div> -->
               <div class="carousel-container__text">
                 <h2 class="carousel-container__heading">Blog Title</h2>
                 <p>
@@ -51,6 +54,7 @@
           vitae!
         </p>
       </div>
+
       <!-- Category name -->
       <h2 class="category-name__header">
         <p class="category-name__name">category name</p>
@@ -58,33 +62,28 @@
         <button class="category-name__seeAllBtn">See all</button>
       </h2>
 
-      <!-- Slider small carousel TODO...-->
+      <!-- Slider small carousel -->
       <vueper-slides
         class="no-shadow"
         fixed-height="true"
         :visible-slides="3"
         slide-multiple
         :gap="1"
-        :slide-ratio="1 / 4"
-        :dragging-distance="200"
+        :slide-ratio="1 / 2"
+        :dragging-distance="100"
         :breakpoints="{
           800: { visibleSlides: 2, slideMultiple: 2, height: 500 },
           600: { visibleSlides: 1, slideMultiple: 1, height: 500 }
         }"
       >
-        <vueper-slide v-for="i in 6" :key="i" :title="i.toString()">
+        <vueper-slide v-for="i in 6" :key="i">
           <template #content>
             <div class="small-cards-container">
-              <SmallCard />
+              <SmallCard :title="title" :description="description" />
             </div>
           </template>
         </vueper-slide>
       </vueper-slides>
-      <!-- <div class="small-cards-container">
-        <div v-for="card in 3" :key="card">
-          <SmallCard />
-        </div>
-      </div> -->
 
       <!-- Category name -->
       <h2 class="category-name__header">
@@ -95,7 +94,7 @@
       <!-- Category second line -->
       <div class="small-cards-container-second">
         <span v-for="card in 2" :key="card">
-          <SmallCard />
+          <SmallCard :title="title" :description="description" />
         </span>
       </div>
       <NewsletterSignUpCard
@@ -108,6 +107,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import BaseLink from '@/components/ui/BaseLink';
 import SmallCard from '@/components/SmallCard';
 import NewsletterSignUpCard from '~/components/cards/NewsletterSignUpCard.vue';
 import { VueperSlides, VueperSlide } from 'vueperslides';
@@ -118,7 +119,8 @@ export default {
     SmallCard,
     NewsletterSignUpCard,
     VueperSlides,
-    VueperSlide
+    VueperSlide,
+    BaseLink
   },
   data() {
     return {
@@ -129,8 +131,24 @@ export default {
               '//images.ctfassets.net/w3qjq8no4dj7/5zCWxoZAxqpWvd2ezsNkfF/fe236765f074048b25c50fedce93315c/DSC05898_3x.jpg'
           }
         }
-      }
+      },
+      title: 'Blog Title',
+      description:
+        'Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum ipsumLoremipsumLorem ',
+      isActive: null,
+      categories: ['Mains', 'Desserts', 'Salads', 'Sides', 'Baby Food']
     };
+  },
+  methods: {
+    toggleActive(i) {
+      this.isActive = i;
+    }
+  },
+  computed: {
+    ...mapGetters({
+      title: 'testCardData/getTitle',
+      description: 'testCardData/getDescription'
+    })
   }
 };
 </script>
@@ -145,6 +163,14 @@ export default {
   display: flex;
   justify-content: space-around;
   background-color: rgb(109, 233, 235);
+
+  &__item {
+    > a {
+      color: black;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
 }
 
 .main-content {
@@ -164,7 +190,7 @@ export default {
   @include whenScreenIs(xs) {
     // display: flex;
     flex-direction: column-reverse;
-    margin: 0;
+    margin: 15px 0 0 0;
     height: 420px;
   }
   display: flex;
@@ -283,6 +309,7 @@ export default {
   // height: 300px;
   display: flex;
   flex-direction: row;
+  text-align: center;
 }
 
 .small-cards-container-second {
@@ -296,13 +323,18 @@ export default {
   }
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
 }
 .flower-img-container {
+  margin-top: 20px;
   position: absolute;
   margin-left: -7rem;
 }
 
 .vueperslides--fixed-height {
   height: 400px;
+}
+.active {
+  border-bottom: 2px solid rgb(2, 160, 223);
 }
 </style>
