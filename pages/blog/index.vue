@@ -47,6 +47,7 @@
           </template>
         </vueper-slide>
       </vueper-slides>
+      <!-- END Carousel -->
 
       <!-- Welcome banner -->
       <div class="welcome-banner">
@@ -57,80 +58,53 @@
         </p>
       </div>
 
-      <!-- Category name -->
-      <h2 class="category-name__header">
-        <p class="category-name__name">Mains</p>
-        <p class="category-name__dots"></p>
-        <nuxt-link :to="'/blog/category/Mains'" class="category-name__seeAllBtn"
-          >See all</nuxt-link
-        >
-      </h2>
-
-      <!-- Slider small carousel -->
-      <vueper-slides
-        class="no-shadow"
-        fixed-height="true"
-        :visible-slides="3"
-        slide-multiple
-        :gap="1"
-        :slide-ratio="1 / 2"
-        :dragging-distance="100"
-        :breakpoints="{
-          800: { visibleSlides: 2, slideMultiple: 2, height: 500 },
-          600: { visibleSlides: 1, slideMultiple: 1, height: 500 }
-        }"
+      <div
+        v-for="cat in categories"
+        :key="cat.id"
+        class="all-categories-wrapper"
       >
-        <vueper-slide v-for="i in 6" :key="i">
-          <template #content>
-            <div class="small-cards-container">
-              <SmallCard :title="title" :description="description" />
-            </div>
-          </template>
-        </vueper-slide>
-      </vueper-slides>
+        <!-- Category name -->
+        <h2 class="category-name__header">
+          <p class="category-name__name">{{ cat.name }}</p>
+          <p class="category-name__dots"></p>
+          <nuxt-link
+            :to="'/blog/category/' + cat.name"
+            class="category-name__seeAllBtn"
+            >See all</nuxt-link
+          >
+        </h2>
 
-      <!-- Category name -->
-      <h2 class="category-name__header">
-        <p class="category-name__name">Desserts</p>
-        <p class="category-name__dots"></p>
-        <nuxt-link to="/blog/category/Desserts" class="category-name__seeAllBtn"
-          >See all</nuxt-link
+        <!-- Slider small carousel -->
+        <vueper-slides
+          class="no-shadow"
+          fixed-height="true"
+          :visible-slides="3"
+          slide-multiple
+          :gap="1"
+          :slide-ratio="1 / 2"
+          :dragging-distance="100"
+          :breakpoints="{
+            800: { visibleSlides: 2, slideMultiple: 2, height: 500 },
+            600: { visibleSlides: 1, slideMultiple: 1, height: 500 }
+          }"
         >
-      </h2>
-      <!-- Category second line -->
-      <div class="small-cards-container-second">
+          <vueper-slide v-for="i in 6" :key="i">
+            <template #content>
+              <div class="small-cards-container">
+                <SmallCard :title="title" :description="description" />
+              </div>
+            </template>
+          </vueper-slide>
+        </vueper-slides>
+      </div>
+
+      <!-- <div class="small-cards-container-second">
         <span v-for="card in 2" :key="card">
           <SmallCard :title="title" :description="description" />
         </span>
-      </div>
-      <!-- Category name -->
-      <h2 class="category-name__header">
-        <p class="category-name__name">Salads</p>
-        <p class="category-name__dots"></p>
-        <nuxt-link to="/blog/category/Salads" class="category-name__seeAllBtn"
-          >See all</nuxt-link
-        >
-      </h2>
-      <!-- Category second line -->
-      <div class="small-cards-container-second">
-        <span v-for="card in 2" :key="card">
-          <SmallCard :title="title" :description="description" />
-        </span>
-      </div>
-      <!-- Category name -->
-      <h2 class="category-name__header">
-        <p class="category-name__name">Sides</p>
-        <p class="category-name__dots"></p>
-        <nuxt-link to="/blog/category/Sides" class="category-name__seeAllBtn"
-          >See all</nuxt-link
-        >
-      </h2>
-      <!-- Category second line -->
-      <div class="small-cards-container-second">
-        <span v-for="card in 1" :key="card">
-          <SmallCard :title="title" :description="description" />
-        </span>
-      </div>
+      </div> -->
+
+      <!-- SIGN UP FORM  -->
       <NewsletterSignUpCard
         :title="'Sign up for great offers'"
         :text="'Lorem Lorem lorem Loremlorem loremlorem'"
