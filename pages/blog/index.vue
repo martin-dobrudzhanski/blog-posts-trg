@@ -59,9 +59,11 @@
 
       <!-- Category name -->
       <h2 class="category-name__header">
-        <p class="category-name__name">category name</p>
+        <p class="category-name__name">Mains</p>
         <p class="category-name__dots"></p>
-        <button class="category-name__seeAllBtn">See all</button>
+        <nuxt-link :to="'/blog/category/Mains'" class="category-name__seeAllBtn"
+          >See all</nuxt-link
+        >
       </h2>
 
       <!-- Slider small carousel -->
@@ -89,13 +91,43 @@
 
       <!-- Category name -->
       <h2 class="category-name__header">
-        <p class="category-name__name">category name</p>
+        <p class="category-name__name">Desserts</p>
         <p class="category-name__dots"></p>
-        <button class="category-name__seeAllBtn">See all</button>
+        <nuxt-link to="/blog/category/Desserts" class="category-name__seeAllBtn"
+          >See all</nuxt-link
+        >
       </h2>
       <!-- Category second line -->
       <div class="small-cards-container-second">
         <span v-for="card in 2" :key="card">
+          <SmallCard :title="title" :description="description" />
+        </span>
+      </div>
+      <!-- Category name -->
+      <h2 class="category-name__header">
+        <p class="category-name__name">Salads</p>
+        <p class="category-name__dots"></p>
+        <nuxt-link to="/blog/category/Salads" class="category-name__seeAllBtn"
+          >See all</nuxt-link
+        >
+      </h2>
+      <!-- Category second line -->
+      <div class="small-cards-container-second">
+        <span v-for="card in 2" :key="card">
+          <SmallCard :title="title" :description="description" />
+        </span>
+      </div>
+      <!-- Category name -->
+      <h2 class="category-name__header">
+        <p class="category-name__name">Sides</p>
+        <p class="category-name__dots"></p>
+        <nuxt-link to="/blog/category/Sides" class="category-name__seeAllBtn"
+          >See all</nuxt-link
+        >
+      </h2>
+      <!-- Category second line -->
+      <div class="small-cards-container-second">
+        <span v-for="card in 1" :key="card">
           <SmallCard :title="title" :description="description" />
         </span>
       </div>
@@ -305,7 +337,7 @@ export default {
     background-color: black;
     color: white;
     border-radius: 15px;
-    padding: 0 10px;
+    padding: 5px 10px;
   }
 }
 

@@ -23,6 +23,8 @@
         />
       </div>
       <vueper-slides
+        autoplay
+        duration="3500"
         fixed-height="true"
         :breakpoints="{ 600: { height: 450 } }"
       >
