@@ -1,6 +1,9 @@
 <template>
   <div class="small-card-container">
-    <div class="small-card-container__image"></div>
+    <div
+      :style="{ backgroundImage: `url(${thumbnail})` }"
+      class="small-card-container__image"
+    ></div>
     <div class="small-card-container__text">
       <h2 class="small-card-container__heading">{{ title }}</h2>
       <p>
@@ -15,10 +18,16 @@
 export default {
   props: {
     title: {
-      type: String
+      type: String,
+      required: true
     },
     description: {
-      type: String
+      type: String,
+      required: true
+    },
+    thumbnail: {
+      type: String,
+      required: true
     }
   }
 };
@@ -57,12 +66,12 @@ export default {
       border-radius: 0;
       width: 100%;
     }
-    background-image: url('~/assets/img/burgers.jpg');
+    // background-image: url('~/assets/img/burgers.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 95%;
-    height: 150px;
+    height: 180px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
   }

@@ -51,7 +51,11 @@
 
       <div class="small-cards-container-second">
         <span v-for="card in 6" :key="card">
-          <SmallCard :title="title" :description="description" />
+          <SmallCard
+            :thumbnail="img"
+            :title="title"
+            :description="description"
+          />
         </span>
       </div>
     </main>
@@ -83,6 +87,8 @@ export default {
       title: 'Blog Title',
       description:
         'Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum ipsumLoremipsumLorem ',
+      img:
+        'https://www.missionburgers.com.au/themes/mission-burgers/assets/images/carousel/carousel1.jpg',
       isActive: null,
       categories: [
         { id: 1, name: 'Mains' },

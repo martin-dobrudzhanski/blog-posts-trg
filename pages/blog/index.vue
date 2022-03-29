@@ -91,7 +91,11 @@
           <vueper-slide v-for="i in 6" :key="i">
             <template #content>
               <div class="small-cards-container">
-                <SmallCard :title="title" :description="description" />
+                <SmallCard
+                  :thumbnail="img"
+                  :title="title"
+                  :description="description"
+                />
               </div>
             </template>
           </vueper-slide>
@@ -141,6 +145,8 @@ export default {
       title: 'Blog Title',
       description:
         'Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum ipsumLoremipsumLorem ',
+      img:
+        'https://insanelygoodrecipes.com/wp-content/uploads/2020/10/Hamburger-with-Fresh-Vegetables-683x1024.webp',
       isActive: null,
       categories: [
         { id: 1, name: 'Mains' },
