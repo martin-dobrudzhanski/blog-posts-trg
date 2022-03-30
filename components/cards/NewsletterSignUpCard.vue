@@ -291,7 +291,8 @@ export default {
     }
 
     @include whenScreenIs(mdx) {
-      right: 120px;
+      right: 90px;
+      bottom: 50px;
     }
   }
 

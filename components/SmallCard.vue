@@ -43,8 +43,14 @@ export default {
   margin: 30px auto;
 
   &__heading {
+    @include whenScreenIs(tablet) {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
     font-size: 2rem;
     margin-bottom: 25px;
+    // word-break: break-all;
+    // line-height: initial;
   }
 
   &__text {
@@ -58,6 +64,9 @@ export default {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     > p {
+      @include whenScreenIs(tablet) {
+        margin-bottom: 25px;
+      }
       margin-bottom: 40px;
     }
   }

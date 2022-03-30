@@ -56,7 +56,12 @@
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
           vitae!
         </p>
+        <button class="welcome-banner__view-all-btn">
+          View all
+        </button>
       </div>
+
+      <!-- Categories -->
 
       <div
         v-for="cat in categories"
@@ -81,20 +86,20 @@
           :visible-slides="3"
           slide-multiple
           :gap="1"
-          :slide-ratio="1 / 2"
+          :slide-ratio="1 / 3"
           :dragging-distance="100"
           :breakpoints="{
             800: { visibleSlides: 2, slideMultiple: 2, height: 500 },
             600: { visibleSlides: 1, slideMultiple: 1, height: 500 }
           }"
         >
-          <vueper-slide v-for="i in 6" :key="i">
+          <vueper-slide v-for="item in cat.items" :key="item">
             <template #content>
               <div class="small-cards-container">
                 <SmallCard
                   :thumbnail="img"
-                  :title="title"
-                  :description="description"
+                  :title="item.title"
+                  :description="item.description"
                 />
               </div>
             </template>
@@ -149,12 +154,92 @@ export default {
         'https://insanelygoodrecipes.com/wp-content/uploads/2020/10/Hamburger-with-Fresh-Vegetables-683x1024.webp',
       isActive: null,
       categories: [
-        { id: 1, name: 'Mains' },
-        { id: 2, name: 'Desserts' },
-        { id: 3, name: 'Salads' },
-        { id: 4, name: 'Sides' }
-      ],
-      content: null
+        {
+          id: 1,
+          name: 'Mains',
+          items: [
+            {
+              title: 'Mains Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            },
+            {
+              title: 'Mains Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            },
+            {
+              title: 'Mains Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            },
+            {
+              title: 'Mains Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            }
+          ]
+        },
+        {
+          id: 2,
+          name: 'Desserts',
+          items: [
+            {
+              title: 'Desserts Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            },
+            {
+              title: 'Desserts Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: 'Salads',
+          items: [
+            {
+              title: 'Salads Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            },
+            {
+              title: 'Salads Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            },
+            {
+              title: 'Salads Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            },
+            {
+              title: 'Salads Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            }
+          ]
+        },
+        {
+          id: 4,
+          name: 'Sides',
+          items: [
+            {
+              title: 'Sides Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            },
+            {
+              title: 'Sides Title',
+              description:
+                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+            }
+          ]
+        }
+      ]
+      // content: null
     };
   },
 
@@ -224,6 +309,9 @@ export default {
     @include whenScreenIs(xs) {
       margin-bottom: 15px;
     }
+    @include whenScreenIs(tablet) {
+      margin-bottom: 30px;
+    }
     font-size: 2.5rem;
     margin-bottom: 50px;
     font-family: 'BurfordExtrudeC', 'BurfordStripesA', 'HelloSidney',
@@ -250,6 +338,9 @@ export default {
       @include whenScreenIs(xs) {
         margin-bottom: 20px;
       }
+      @include whenScreenIs(tablet) {
+        margin-bottom: 0;
+      }
       margin-bottom: 40px;
     }
     z-index: 1;
@@ -272,6 +363,7 @@ export default {
     @include whenScreenIs(xs) {
       margin-top: 0;
     }
+
     border: none;
     color: white;
     background-color: black;
@@ -291,6 +383,18 @@ export default {
   > h1 {
     margin-bottom: 20px;
     font-size: 1.5rem;
+  }
+  &__view-all-btn {
+    @include whenScreenIs(mdx) {
+      display: none;
+    }
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-top: 1.5rem;
+    cursor: pointer;
   }
 }
 
@@ -357,9 +461,6 @@ export default {
 
 .vueperslides--fixed-height {
   height: 400px;
-}
-.vueperslides__bullets {
-  bottom: -10px !important;
 }
 .active {
   border-bottom: 2px solid rgb(2, 160, 223);
