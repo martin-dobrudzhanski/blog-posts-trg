@@ -203,6 +203,9 @@ export default {
     @include whenScreenIs(sm) {
       padding: 0 50px;
     }
+    @include whenScreenIs(xs) {
+      padding: 0 10px;
+    }
   }
 }
 
@@ -224,7 +227,7 @@ export default {
       margin-bottom: 15px;
     }
     @include whenScreenIs(tablet) {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       line-height: 30px;
     }
     font-size: 2.5rem;

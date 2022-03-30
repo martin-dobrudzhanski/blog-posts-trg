@@ -40,7 +40,7 @@ export default {
   display: flex;
   flex-direction: column;
   // width: 60%;
-  margin: 30px auto;
+  margin: 20px auto;
 
   &__heading {
     @include whenScreenIs(tablet) {

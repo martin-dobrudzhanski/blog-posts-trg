@@ -27,6 +27,11 @@ export const state = () => {
             title: 'Mains Title',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
+          },
+          {
+            title: 'Mains Title',
+            description:
+              'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
           }
         ]
       },
