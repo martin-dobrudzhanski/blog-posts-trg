@@ -152,94 +152,7 @@ export default {
         'Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum ipsumLoremipsumLorem ',
       img:
         'https://insanelygoodrecipes.com/wp-content/uploads/2020/10/Hamburger-with-Fresh-Vegetables-683x1024.webp',
-      isActive: null,
-      categories: [
-        {
-          id: 1,
-          name: 'Mains',
-          items: [
-            {
-              title: 'Mains Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            },
-            {
-              title: 'Mains Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            },
-            {
-              title: 'Mains Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            },
-            {
-              title: 'Mains Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            }
-          ]
-        },
-        {
-          id: 2,
-          name: 'Desserts',
-          items: [
-            {
-              title: 'Desserts Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            },
-            {
-              title: 'Desserts Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            }
-          ]
-        },
-        {
-          id: 3,
-          name: 'Salads',
-          items: [
-            {
-              title: 'Salads Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            },
-            {
-              title: 'Salads Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            },
-            {
-              title: 'Salads Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            },
-            {
-              title: 'Salads Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            }
-          ]
-        },
-        {
-          id: 4,
-          name: 'Sides',
-          items: [
-            {
-              title: 'Sides Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            },
-            {
-              title: 'Sides Title',
-              description:
-                'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'
-            }
-          ]
-        }
-      ]
-      // content: null
+      isActive: null
     };
   },
 
@@ -251,7 +164,8 @@ export default {
   computed: {
     ...mapGetters({
       title: 'testCardData/getTitle',
-      description: 'testCardData/getDescription'
+      description: 'testCardData/getDescription',
+      categories: 'testCardData/getCategories'
     })
   },
   mounted() {}
