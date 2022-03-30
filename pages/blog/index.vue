@@ -224,7 +224,8 @@ export default {
       margin-bottom: 15px;
     }
     @include whenScreenIs(tablet) {
-      margin-bottom: 30px;
+      margin-bottom: 5px;
+      line-height: 30px;
     }
     font-size: 2.5rem;
     margin-bottom: 50px;
@@ -240,7 +241,9 @@ export default {
       border-radius: 0;
       text-align: center;
     }
-
+    @include whenScreenIs(tablet) {
+      padding-top: 10px;
+    }
     font-size: 1rem;
     text-align: left;
     width: 40%;
