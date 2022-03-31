@@ -260,7 +260,7 @@ export default {
         right: 70%;
 
         @include whenScreenIs(xs) {
-          right: 85%;
+          right: 50%;
         }
       }
     }
