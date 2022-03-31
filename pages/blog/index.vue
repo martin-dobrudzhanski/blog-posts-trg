@@ -107,12 +107,6 @@
         </vueper-slides>
       </div>
 
-      <!-- <div class="small-cards-container-second">
-        <span v-for="card in 2" :key="card">
-          <SmallCard :title="title" :description="description" />
-        </span>
-      </div> -->
-
       <!-- SIGN UP FORM  -->
       <NewsletterSignUpCard
         :title="'Sign up for great offers'"

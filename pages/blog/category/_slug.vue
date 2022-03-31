@@ -8,6 +8,7 @@
     <main>
       <!-- just for debugging -->
       <h1 class="page-marker">{{ $route.params.slug }}</h1>
+
       <div class="flower-img-container">
         <img
           class="flower-img-container__image"
@@ -22,6 +23,7 @@
         fixed-height="true"
         :breakpoints="{ 600: { height: 450 } }"
       >
+        <!-- Carousel -->
         <vueper-slide v-for="i in 2" :key="i">
           <template #content>
             <div class="carousel-container">
@@ -44,7 +46,7 @@
       </vueper-slides>
 
       <div class="small-cards-container-second">
-        <span v-for="card in 6" :key="card">
+        <span v-for="card in 5" :key="card">
           <SmallCard
             :thumbnail="img"
             :title="title"
@@ -83,22 +85,18 @@ export default {
         'Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum ipsumLoremipsumLorem ',
       img:
         'https://www.missionburgers.com.au/themes/mission-burgers/assets/images/carousel/carousel1.jpg',
-      isActive: null,
-      categories: [
-        { id: 1, name: 'Mains' },
-        { id: 2, name: 'Desserts' },
-        { id: 3, name: 'Salads' },
-        { id: 4, name: 'Sides' }
-      ]
+      isActive: null
     };
   },
   methods: {},
   computed: {
     ...mapGetters({
       title: 'testCardData/getTitle',
-      description: 'testCardData/getDescription'
+      description: 'testCardData/getDescription',
+      categories: 'testCardData/getCategories'
     })
-  }
+  },
+  mounted() {}
 };
 </script>
 <style lang="scss" scoped>
