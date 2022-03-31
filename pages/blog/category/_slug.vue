@@ -1,13 +1,7 @@
 <template>
   <div class="main-content">
     <nav class="nav">
-      <div
-        v-for="(cat, i) in categories"
-        :key="cat.id"
-        @click="toggleActive(i)"
-        :class="{ active: i === isActive }"
-        class="nav__item"
-      >
+      <div v-for="cat in categories" :key="cat.id" class="nav__item">
         <nuxt-link :to="'/blog/category/' + cat.name">{{ cat.name }}</nuxt-link>
       </div>
     </nav>
@@ -98,11 +92,7 @@ export default {
       ]
     };
   },
-  methods: {
-    toggleActive(i) {
-      this.isActive = i;
-    }
-  },
+  methods: {},
   computed: {
     ...mapGetters({
       title: 'testCardData/getTitle',
@@ -123,6 +113,9 @@ export default {
   background-color: rgb(109, 233, 235);
 
   &__item {
+    .nuxt-link-exact-active {
+      border-bottom: 2px solid rgb(4, 138, 190);
+    }
     > a {
       color: black;
       font-weight: bold;
@@ -241,9 +234,7 @@ export default {
 .vueperslides--fixed-height {
   height: 400px;
 }
-.active {
-  border-bottom: 2px solid rgb(2, 160, 223);
-}
+
 .page-marker {
   text-align: center;
 }
