@@ -50,7 +50,7 @@
       <div class="small-cards-container-second">
         <span v-for="(card, i) in selectedCategory" :key="i">
           <SmallCard
-            :thumbnail="img"
+            :thumbnail="card.thumbnail"
             :title="card.title"
             :description="card.description"
           />
@@ -74,9 +74,7 @@ export default {
   },
   data() {
     return {
-      selectedCategory: null,
-      img:
-        'https://www.missionburgers.com.au/themes/mission-burgers/assets/images/carousel/carousel1.jpg'
+      selectedCategory: null
     };
   },
 
@@ -92,7 +90,7 @@ export default {
     this.selectedCategory = await this.categories.find(
       cat => cat.name === this.$route.params.slug
     ).items;
-    console.log('asaasa', this.selectedCategory);
+    console.log('item ', this.selectedCategory);
   }
 };
 </script>

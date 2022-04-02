@@ -42,6 +42,13 @@ export const state = () => {
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
               '//images.ctfassets.net/w3qjq8no4dj7/2NoUGOFqwiJw7hjiHM0yNl/5984e29f07101a79ae8a5f10af80fd3a/DSC05898_2x.jpg?fit=fill&w=840&h=840'
+          },
+          {
+            title: 'Mains Title',
+            description:
+              'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
+            thumbnail:
+              '//images.ctfassets.net/w3qjq8no4dj7/2NoUGOFqwiJw7hjiHM0yNl/5984e29f07101a79ae8a5f10af80fd3a/DSC05898_2x.jpg?fit=fill&w=840&h=840'
           }
         ]
       },
@@ -69,6 +76,13 @@ export const state = () => {
         id: 3,
         name: 'Salads',
         items: [
+          {
+            title: 'Salads Title',
+            description:
+              'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
+            thumbnail:
+              'https://images.immediate.co.uk/production/volatile/sites/30/2017/06/healthy-nicoise-09b6cd9.jpg'
+          },
           {
             title: 'Salads Title',
             description:
