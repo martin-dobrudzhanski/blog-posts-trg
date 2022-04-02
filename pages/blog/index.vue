@@ -1,13 +1,7 @@
 <template>
   <div class="main-content">
     <nav class="nav">
-      <div
-        v-for="(cat, i) in categories"
-        :key="cat.id"
-        @click="toggleActive(i)"
-        :class="{ active: i === isActive }"
-        class="nav__item"
-      >
+      <div v-for="cat in categories" :key="cat.id" class="nav__item">
         <nuxt-link :to="'/blog/category/' + cat.name">{{ cat.name }}</nuxt-link>
       </div>
     </nav>
@@ -93,11 +87,11 @@
             600: { visibleSlides: 1, slideMultiple: 1, height: 500 }
           }"
         >
-          <vueper-slide v-for="item in cat.items" :key="item">
+          <vueper-slide v-for="(item, i) in cat.items" :key="i">
             <template #content>
               <div class="small-cards-container">
                 <SmallCard
-                  :thumbnail="img"
+                  :thumbnail="item.thumbnail"
                   :title="item.title"
                   :description="item.description"
                 />
@@ -141,20 +135,12 @@ export default {
           }
         }
       },
-      title: 'Blog Title',
-      description:
-        'Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum ipsumLoremipsumLorem ',
       img:
-        'https://insanelygoodrecipes.com/wp-content/uploads/2020/10/Hamburger-with-Fresh-Vegetables-683x1024.webp',
-      isActive: null
+        'https://images.immediate.co.uk/production/volatile/sites/30/2017/06/healthy-nicoise-09b6cd9.jpg'
     };
   },
 
-  methods: {
-    toggleActive(i) {
-      this.isActive = i;
-    }
-  },
+  methods: {},
   computed: {
     ...mapGetters({
       title: 'testCardData/getTitle',
@@ -375,8 +361,5 @@ export default {
 
 .vueperslides--fixed-height {
   height: 400px;
-}
-.active {
-  border-bottom: 2px solid rgb(2, 160, 223);
 }
 </style>

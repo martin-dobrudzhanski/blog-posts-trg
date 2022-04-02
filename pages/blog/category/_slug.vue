@@ -17,13 +17,13 @@
           width="200px"
         />
       </div>
+      <!-- Carousel -->
       <vueper-slides
         autoplay
         duration="3500"
         fixed-height="true"
         :breakpoints="{ 600: { height: 450 } }"
       >
-        <!-- Carousel -->
         <vueper-slide v-for="i in 2" :key="i">
           <template #content>
             <div class="carousel-container">
@@ -45,12 +45,14 @@
         </vueper-slide>
       </vueper-slides>
 
+      <!-- Items -->
+
       <div class="small-cards-container-second">
-        <span v-for="card in 5" :key="card">
+        <span v-for="(card, i) in selectedCategory" :key="i">
           <SmallCard
             :thumbnail="img"
-            :title="title"
-            :description="description"
+            :title="card.title"
+            :description="card.description"
           />
         </span>
       </div>
@@ -72,22 +74,12 @@ export default {
   },
   data() {
     return {
-      image: {
-        fields: {
-          file: {
-            url:
-              '//images.ctfassets.net/w3qjq8no4dj7/5zCWxoZAxqpWvd2ezsNkfF/fe236765f074048b25c50fedce93315c/DSC05898_3x.jpg'
-          }
-        }
-      },
-      title: 'Blog Title',
-      description:
-        'Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum ipsumLoremipsumLorem ',
+      selectedCategory: null,
       img:
-        'https://www.missionburgers.com.au/themes/mission-burgers/assets/images/carousel/carousel1.jpg',
-      isActive: null
+        'https://www.missionburgers.com.au/themes/mission-burgers/assets/images/carousel/carousel1.jpg'
     };
   },
+
   methods: {},
   computed: {
     ...mapGetters({
@@ -96,7 +88,12 @@ export default {
       categories: 'testCardData/getCategories'
     })
   },
-  mounted() {}
+  async mounted() {
+    this.selectedCategory = await this.categories.find(
+      cat => cat.name === this.$route.params.slug
+    ).items;
+    console.log('asaasa', this.selectedCategory);
+  }
 };
 </script>
 <style lang="scss" scoped>
