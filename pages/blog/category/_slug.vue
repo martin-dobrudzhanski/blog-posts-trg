@@ -48,13 +48,17 @@
       <!-- Items -->
 
       <div class="small-cards-container-second">
-        <span v-for="(card, i) in selectedCategory" :key="i">
+        <nuxt-link
+          v-for="(card, i) in selectedCategory"
+          :key="i"
+          :to="`/blog/category/details/${card.id}`"
+        >
           <SmallCard
             :thumbnail="card.thumbnail"
             :title="card.title"
             :description="card.description"
           />
-        </span>
+        </nuxt-link>
       </div>
     </main>
   </div>
@@ -77,6 +81,9 @@ export default {
       selectedCategory: null
     };
   },
+  asyncData(context) {
+    console.log('context', context);
+  },
 
   methods: {},
   computed: {
@@ -90,7 +97,7 @@ export default {
     this.selectedCategory = await this.categories.find(
       cat => cat.name === this.$route.params.slug
     ).items;
-    console.log('item ', this.selectedCategory);
+    console.log('path ', this.$route.params);
   }
 };
 </script>
@@ -127,6 +134,9 @@ export default {
     }
     @include whenScreenIs(sm) {
       padding: 0 50px;
+    }
+    @include whenScreenIs(xs) {
+      padding: 0 10px;
     }
   }
 }
@@ -217,6 +227,13 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
+
+  > a,
+  .nuxt-link-active,
+  .nuxt-link-exact-active {
+    text-decoration: none;
+    color: black !important;
+  }
 }
 .flower-img-container {
   margin-top: 20px;
