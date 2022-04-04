@@ -9,7 +9,9 @@
       <p>
         {{ description }}
       </p>
-      <button class="small-card-container__read-more-btn">Read more</button>
+      <button @click="redirectTo" class="small-card-container__read-more-btn">
+        Read more
+      </button>
     </div>
   </div>
 </template>
@@ -28,6 +30,14 @@ export default {
     thumbnail: {
       type: String,
       required: true
+    },
+    id: {
+      type: String
+    }
+  },
+  methods: {
+    redirectTo() {
+      this.$router.push('/blog/category/details/' + this.id);
     }
   }
 };
@@ -92,6 +102,7 @@ export default {
     background-color: black;
     border-radius: 15px;
     padding: 5px 10px;
+    cursor: pointer;
   }
 }
 </style>
