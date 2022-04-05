@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>Item id: {{ $route.params.slug }}</h1>
     <HeroCarousel :slides="content.heroCarouselSlides" />
     <main>
-      <div>
+      <div class="large-cart-wrapper">
         <LargeCard
           :title="selectedItem.title"
           :description="selectedItem.description"
@@ -54,5 +53,8 @@ h1 {
   font-size: 2rem;
   text-align: center;
   padding: 10px 0;
+}
+.large-cart-wrapper {
+  margin-top: 50px;
 }
 </style>

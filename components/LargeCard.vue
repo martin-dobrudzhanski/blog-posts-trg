@@ -72,7 +72,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('ui', ['footerNavigationLinks', 'footerSocialLinks'])
+    ...mapGetters('ui', ['footerSocialLinks'])
   }
 };
 </script>
@@ -115,6 +115,10 @@ export default {
   }
 }
 .text-container {
+  @include whenScreenIs(tablet) {
+    width: auto;
+    // text-align: center;
+  }
   flex-direction: column;
   padding-left: 6rem;
   padding-top: 1rem;
@@ -143,7 +147,7 @@ export default {
 
   .author,
   .post-date {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     padding-bottom: 20px;
   }
