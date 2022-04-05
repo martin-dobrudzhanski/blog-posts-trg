@@ -97,7 +97,8 @@ export default {
     this.selectedCategory = await this.categories.find(
       cat => cat.name === this.$route.params.slug
     ).items;
-    console.log('path ', this.$route.params);
+
+    localStorage.setItem('currentItem', JSON.stringify(this.selectedCategory));
   }
 };
 </script>

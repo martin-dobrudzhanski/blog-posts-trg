@@ -49,7 +49,6 @@ export default {
 .small-card-container {
   display: flex;
   flex-direction: column;
-  // width: 60%;
   margin: 20px auto;
 
   &__heading {
@@ -59,8 +58,6 @@ export default {
     }
     font-size: 2rem;
     margin-bottom: 25px;
-    // word-break: break-all;
-    // line-height: initial;
   }
 
   &__text {
@@ -85,7 +82,7 @@ export default {
       border-radius: 0;
       width: 100%;
     }
-    // background-image: url('~/assets/img/burgers.jpg');
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

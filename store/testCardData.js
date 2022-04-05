@@ -22,7 +22,7 @@ export const state = () => {
             id: 2,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Mains Title',
+            title: 'Plank Salmon',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -32,7 +32,7 @@ export const state = () => {
             id: 3,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Mains Title',
+            title: 'Braised Chicken',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -42,7 +42,7 @@ export const state = () => {
             id: 4,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Mains Title',
+            title: 'Seared Scallops',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -52,7 +52,7 @@ export const state = () => {
             id: 5,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Mains Title',
+            title: 'Grilled Pizza',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -62,7 +62,7 @@ export const state = () => {
             id: 6,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Mains Title',
+            title: 'Pasta Carbonara',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -78,7 +78,7 @@ export const state = () => {
             id: 1,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Desserts Title',
+            title: 'Ice Cream',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -88,7 +88,7 @@ export const state = () => {
             id: 2,
             author: 'Peter Jonson',
             date: new Date().toDateString(),
-            title: 'Desserts Title',
+            title: 'Creme Brulee',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -114,7 +114,7 @@ export const state = () => {
             id: 2,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Salads Title',
+            title: 'Broccoli Salad',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -124,7 +124,7 @@ export const state = () => {
             id: 3,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Salads Title',
+            title: 'Cesar Salad',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -134,7 +134,7 @@ export const state = () => {
             id: 4,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Salads Title',
+            title: 'Shopska Salad',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:
@@ -144,7 +144,7 @@ export const state = () => {
             id: 5,
             author: 'Jhon Smith',
             date: new Date().toDateString(),
-            title: 'Salads Title',
+            title: 'Green Salad',
             description:
               'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
             thumbnail:

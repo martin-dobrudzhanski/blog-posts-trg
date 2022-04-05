@@ -3,13 +3,13 @@
     <h1>Item id: {{ $route.params.slug }}</h1>
     <HeroCarousel :slides="content.heroCarouselSlides" />
     <main>
-      <div class="large-card-wrapper">
-        <h1>Title</h1>
-        <div>Image</div>
-        <p>Author</p>
-        <p>Date</p>
-        <p>Description</p>
-        <div>Social media icons</div>
+      <div>
+        <LargeCard
+          :title="selectedItem.title"
+          :description="selectedItem.description"
+          :author="selectedItem.author"
+          :date="selectedItem.date"
+        />
       </div>
     </main>
   </div>
@@ -17,18 +17,35 @@
 <script>
 import { getContent } from '~/libs/templateHelpers.js';
 import HeroCarousel from '~/components/HeroCarousel.vue';
+
+import LargeCard from '~/components/LargeCard.vue';
 export default {
   components: {
-    HeroCarousel
+    HeroCarousel,
+    LargeCard
   },
   data() {
     return {
-      content: null
+      content: null,
+      selectedItem: {}
     };
   },
+  methods: {},
+  computed: {},
 
   async asyncData({ store, params, error }) {
     return getContent(store, 'home', error);
+  },
+
+  mounted() {
+    const myItem = JSON.parse(localStorage.getItem('currentItem'));
+    this.selectedItem = myItem.find(
+      el => el.id.toString() === this.$route.params.slug
+    );
+    console.log(
+      'asasas',
+      myItem.find(el => el.id.toString() === this.$route.params.slug)
+    );
   }
 };
 </script>
