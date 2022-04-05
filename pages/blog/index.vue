@@ -90,11 +90,13 @@
           <vueper-slide v-for="(item, i) in cat.items" :key="i">
             <template #content>
               <div class="small-cards-container">
-                <SmallCard
-                  :thumbnail="item.thumbnail"
-                  :title="item.title"
-                  :description="item.description"
-                />
+                <nuxt-link :to="'/blog/category/' + cat.name">
+                  <SmallCard
+                    :thumbnail="item.thumbnail"
+                    :title="item.title"
+                    :description="item.description"
+                  />
+                </nuxt-link>
               </div>
             </template>
           </vueper-slide>
@@ -335,6 +337,13 @@ export default {
   display: flex;
   flex-direction: row;
   text-align: center;
+
+  > a,
+  .nuxt-link-active,
+  .nuxt-link-exact-active {
+    text-decoration: none;
+    color: black !important;
+  }
 }
 
 .small-cards-container-second {

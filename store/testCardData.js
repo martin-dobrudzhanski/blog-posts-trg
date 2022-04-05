@@ -80,7 +80,7 @@ export const state = () => {
             date: new Date().toDateString(),
             title: 'Ice Cream',
             description:
-              'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum',
+              'Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem IpsumLorem Ipsum Lorem IpsumLorem Ipsum',
             thumbnail:
               'https://www.tasteofhome.com/wp-content/uploads/2019/05/Fried-Ice-Cream-Dessert-Bars-_EXPS_SDJJ19_232652_B02_06_1b_rms-2.jpg?fit=700,1024'
           },
