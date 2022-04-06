@@ -16,6 +16,7 @@
         />
       </div>
       <vueper-slides
+        class="no-shadow"
         autoplay
         duration="3500"
         fixed-height="true"

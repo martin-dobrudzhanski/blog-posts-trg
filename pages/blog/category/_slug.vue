@@ -7,7 +7,7 @@
     </nav>
     <main>
       <!-- just for debugging -->
-      <h1 class="page-marker">{{ $route.params.slug }}</h1>
+      <!-- <h1 class="page-marker">{{ $route.params.slug }}</h1> -->
 
       <div class="flower-img-container">
         <img
@@ -19,6 +19,7 @@
       </div>
       <!-- Carousel -->
       <vueper-slides
+        class="no-shadow"
         autoplay
         duration="3500"
         fixed-height="true"
