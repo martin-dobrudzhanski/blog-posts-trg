@@ -8,6 +8,7 @@
           :description="selectedItem.description"
           :author="selectedItem.author"
           :date="selectedItem.date"
+          :thumbnail="selectedItem.thumbnail"
         />
       </div>
     </main>

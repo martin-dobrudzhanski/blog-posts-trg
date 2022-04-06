@@ -2,11 +2,7 @@
   <div class="large-card-wrapper">
     <div class="image-container">
       <img class="left" src="@/assets/img/flower-green.png" alt="image" />
-      <img
-        class="right"
-        src="http://images.ctfassets.net/w3qjq8no4dj7/2NoUGOFqwiJw7hjiHM0yNl/5984e29f07101a79ae8a5f10af80fd3a/DSC05898_2x.jpg?fit=fill&w=840&h=840"
-        alt="image"
-      />
+      <img class="right" :src="thumbnail" alt="image" />
     </div>
     <div class="text-container">
       <h2 class="title">{{ title }}</h2>
@@ -57,6 +53,9 @@ export default {
       type: String
     },
     date: {
+      type: String
+    },
+    thumbnail: {
       type: String
     }
   },
